@@ -14,7 +14,7 @@
 git clone https://github.com/okimurak/dotfiles_win.git
 ```
 
-2. Install dotbiles_win/.bin/install.sh
+2. Install dotfiles_win/.bin/install.sh
 
 3. Enjoy for dotfile managements!
 

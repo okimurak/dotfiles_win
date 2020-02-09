@@ -17,7 +17,9 @@ link_to_homedir() {
   local dotdir=$(readlink -f ${script_dir}/..)
   if [[ "$HOME" != "$dotdir" ]];then
     for f in $dotdir/.??*; do
+      [[ `basename $f` == ".bin" ]] && continue
       [[ `basename $f` == ".git" ]] && continue
+      [[ `basename $f` == ".gitconfig_shared.tmp" ]] && continue
       if [[ -L "$HOME/`basename $f`" ]];then
         command rm -f "$HOME/`basename $f`"
       fi
@@ -29,6 +31,8 @@ link_to_homedir() {
   else
     command echo "same install src dest"
   fi
+
+  [ -e ~/.gitconfig_shared ] || cp $HOME/.gitconfig_shared.tmp ~/.gitconfig_shared
 }
 
 while [ $# -gt 0 ];do
