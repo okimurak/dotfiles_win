@@ -1,8 +1,8 @@
 [user]
         name = okimurak
-        #email = @see .gitconfig.local
+        email = okimurak@​users​.noreply​.github​.com
 [include]
-        path = .gitconfig.local
+        path = .gitconfig_shared
 
 [alias]
         tree = log --graph --pretty=format:'%x09%C(auto) %h %Cgreen %ar %Creset%x09by"%C(cyan ul)%an%Creset" %x09%C(auto)%s %d'
