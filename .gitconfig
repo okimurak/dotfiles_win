@@ -1,6 +1,5 @@
 [user]
         name = okimurak
-        email = okimurak@​users​.noreply​.github​.com
 [include]
         path = .gitconfig_shared
 [alias]
