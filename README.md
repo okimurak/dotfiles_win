@@ -1,6 +1,7 @@
 # dotfiles_win
 
 ## Requirement
+
 - Windows
 - Git-Bash
 - VSCode
@@ -10,14 +11,34 @@
 
 1. Download
 
-```
+```bash
 git clone https://github.com/okimurak/dotfiles_win.git
 ```
 
-2. Install dotfiles_win/.bin/install.sh
+2. Create .git_shared
 
-3. Enjoy for dotfile managements!
+```bash
+cd dotfiles_win
+cp .gitconfig_shared_sample .gitconfig_shared
+```
+
+3. Edit .gitconfig_shared
+
+```
+[user]
+        email = <Your Email Address>
+```
+
+4. Install
+
+```bash
+chmod +x .bin/install.sh
+.bin/install.sh
+```
+
+5. Enjoy for dotfile managements!
 
 ## Components
+
 - bash
 - git
