@@ -16,28 +16,34 @@
 git clone https://github.com/okimurak/dotfiles_win.git
 ```
 
-2. Create .git_shared
+1. Create .git_shared
 
 ```bash
 cd dotfiles_win
 cp .gitconfig_shared_sample .gitconfig_shared
 ```
 
-3. Edit .gitconfig_shared
+1. Edit .gitconfig_shared
 
-```
+```text
 [user]
         email = <Your Email Address>
 ```
 
-4. Install
+1. Get git-prompt.sh
+
+```bash
+curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh > .git-prompt.sh
+```
+
+1. Install
 
 ```bash
 chmod +x .bin/install.sh
 .bin/install.sh
 ```
 
-5. Enjoy for dotfile managements!
+1. Enjoy for dotfile managements!
 
 ## Components
 
