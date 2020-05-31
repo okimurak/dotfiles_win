@@ -2,10 +2,11 @@
 
 ## Requirement
 
-- Windows
-- Git-Bash
+- Windows 10
+- Docker Desktop
+- WSL2
+- Git
 - VSCode
-  - Setting integrated terminal Git-Bash(mingw64)
 
 ## Install
 
