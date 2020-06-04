@@ -6,6 +6,8 @@ alias ll='ls -la'
 alias gs='git status'
 alias ga='git add'
 alias gc='git commit'
+alias gph='git push -u origin HEAD'
+alias gpfh='git push -u -f origin HEAD'
 
 # Docker Operation
 alias dc='docker container'
