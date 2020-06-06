@@ -10,7 +10,7 @@
 [github]
 	user = okimurak
 [core]
-	editor = vmi -c \"set fenc=utf-8\"
+	editor = vim -c \"set fenc=utf-8\"
 [color]
 	diff = auto
 	status = auto
