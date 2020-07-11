@@ -14,6 +14,9 @@ alias dc='docker container'
 alias dcls='docker container ls -a'
 alias dcprune='docker container prune'
 
+# Kubernetes Operation
+alias kc='kubectl'
+
 # aws (from docker container)
 alias aws='docker run --rm -ti -v ~/.aws:/root/.aws -v $(pwd):/aws amazon/aws-cli'
 
