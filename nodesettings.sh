@@ -1,7 +1,7 @@
 #!bin/bash
 
 # node install
-sudo apt update && apt install nodejs npm
+sudo apt update && sudo apt install nodejs npm
 
 # node settings in workspace
 npm init -y
