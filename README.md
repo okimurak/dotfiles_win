@@ -49,3 +49,11 @@ chmod +x .bin/install.sh
 
 - bash
 - git
+
+## Tool
+
+(Option) : Install tools.
+
+``` bash
+sh  tool/intall.sh
+```
