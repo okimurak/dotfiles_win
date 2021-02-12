@@ -1,8 +1,17 @@
 #/bin/bash
-# Use USL" env
+# Install go latest version
 
-GO_FILE=go1.15.8.linux-amd64.tar.gz
-wget https://dl.google.com/go/$GO_FILE
-sudo tar -C /usr/local -xzf $GO_FILE
+GO_ORG_DOWNLOAD_DOMAIN="https://golang.org"
+go_latest_version_path=$(wget -qO- ${GO_ORG_DOWNLOAD_DOMAIN}/dl/ | grep -oP '/dl\/go([0-9\.]+)\.linux-amd64\.tar\.gz' | head -n 1)
+
+echo "Get ${go_latest_version_path} ..."
+echo ${GO_ORG_DOWNLOAD_DOMAIN}${go_latest_version_path}
+wget ${GO_ORG_DOWNLOAD_DOMAIN}${go_latest_version_path}
+
+
+go_file_name=$(echo ${go_latest_version_path} | sed -e 's/\/dl\///g')
+sudo tar -C /usr/local -xzf ${go_file_name}
 export PATH="${PATH}":/usr/local/go/bin
-rm $GO_FILE
+rm ${go_file_name}
+
+go version
