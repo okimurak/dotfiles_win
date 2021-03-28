@@ -3,6 +3,12 @@
 # node install
 sudo apt update && sudo apt install nodejs npm
 
+# move workspace
+base_dir=$(dirname $0)
+workspace=${base_dir}/../..
+textlintrc_path=$(pwd)/${base_dir}/.textlintrc 
+cd ${workspace}
+
 # node settings in workspace
 npm init -y
 
@@ -13,5 +19,7 @@ npm install --save-dev \
     textlint-rule-spellcheck-tech-word \
     textlint-rule-ja-space-between-half-and-full-width
 
-# settings textlint
+# initialize textlint
 npx textlint --init
+rm -f .textlintrc
+ln -snf ${textlintrc_path} .textlintrc 
