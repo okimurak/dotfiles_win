@@ -1,7 +1,7 @@
 #!bin/bash
 
-cd $(pwd)../../
+base_dir=$(dirname $0)
 
-sh go_install.sh
-sh nodesettings.sh
-sh python_install.sh
+sh ${base_dir}/go_install.sh
+sh ${base_dir}/nodesettings.sh
+sh ${base_dir}/python_install.sh
