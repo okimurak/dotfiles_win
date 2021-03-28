@@ -1,8 +1,14 @@
-#!bin/bash
+#!/bin/bash
 
-base_dir=$(dirname $0)
+base_dir="$(dirname $0)"
 
-#sh ${base_dir}/go_install.sh
-#sh ${base_dir}/nodesettings.sh
-#sh ${base_dir}/python_install.sh
-sh ${base_dir}/markdownlint.sh
+declare -a arr=(
+  "go_install.sh"
+  "nodesettings.sh"
+  "python_install.sh"
+  "markdownlint.sh"
+  )
+
+for tool_shell in "${arr[@]}"; do
+  bash "${base_dir}/${tool_shell}"
+done

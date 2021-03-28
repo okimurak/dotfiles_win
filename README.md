@@ -55,5 +55,5 @@ chmod +x .bin/install.sh
 (Option) : Install tools.
 
 ``` bash
-sh  tool/intall.sh
+./tool/intall.sh
 ```
